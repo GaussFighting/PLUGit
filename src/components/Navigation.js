@@ -18,7 +18,7 @@ const Navigation = () => {
 
   return (
     <>
-      <Navbar className="navigation p-0" expand="md" primary={true}>
+      <Navbar className="navigation p-0" expand="md">
         <NavbarBrand className="logo-link" href={"index.html"}>
           {" "}
           <img

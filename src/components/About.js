@@ -3,10 +3,9 @@ import Box from "../components/Box.js";
 
 const About = () => {
   return (
-    <div className="container pt-4">
-      {" "}
+    <div className="pt-4">
       <h1>O NAS</h1>
-      <div className="container py-4 px-5">
+      <div className="py-4 px-5">
         <Box
           num={
             "Wrocławska Spółka PLUG it powstała dzięki obecnej na polskim rynku, od 2000 roku hurtowni B.H.U ORION z Bełchatowa."
