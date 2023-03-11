@@ -19,7 +19,7 @@ const Navigation = () => {
   return (
     <>
       <Navbar className="navigation p-0" expand="md" primary={true}>
-        <NavbarBrand className="logo-link" href={logo}>
+        <NavbarBrand className="logo-link" href={"index.html"}>
           {" "}
           <img
             alt="logo"

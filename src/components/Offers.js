@@ -1,9 +1,64 @@
 import React from "react";
+import { Row, Col } from "reactstrap";
+import Offer from "./Offer";
+import bulbs from "../styles/images/bulb.jpg";
+import lamps from "../styles/images/factoryLamps.jpg";
+import wires from "../styles/images/wires.jpg";
+import Box2 from "../components/Box.js";
+
 const Offers = () => {
   return (
-    <div id="offer" className="container pt-4">
+    <div className="container">
+      {" "}
       <h1>OFERTA</h1>
-      <div className="pb-4"></div>
+      <div id="offer" className="container pt-4">
+        <Row className="row justify-content-md-center">
+          <Col className="card" lg={4}>
+            <Offer
+              src={wires}
+              title={"PRZEWODY"}
+              description={[
+                "kable energetyczne",
+                "przewody instalacyjne",
+                "przewody telefocznine",
+                "przewody sygnalizacyjne",
+                "przewody teleinformatyczne",
+                "przewody sterownicze",
+                "przewody zgodne z normą kolejową",
+              ]}
+            />
+          </Col>{" "}
+          <Col className="card" lg={4}>
+            <Offer
+              src={lamps}
+              title={"ŹRÓDŁA ŚWIATŁA"}
+              description={[
+                "żarówki, świetlówki liniowe",
+                "świetlówki kompatkowe",
+                "lampy wyładowcze, halogenowe",
+                "lampy sodowe, rtęciowe",
+                "lampy specjalistyczne",
+                "baterie, latarki, akumulatory",
+              ]}
+            />
+          </Col>
+          <Col className="card" lg={4}>
+            <Offer
+              src={bulbs}
+              title={"OŚWIETLENIE"}
+              description={[
+                "oprawy uliczne, parkowe",
+                "oprawy biurowe",
+                "oprawy magazynowe, przemysłowe",
+                "oprawy awaryjne, oprawy rastrowe",
+                "oprawy mieszkaniowe",
+                "systemy świetlne",
+                "słupy oświetleniowe",
+              ]}
+            />
+          </Col>
+        </Row>
+      </div>
     </div>
   );
 };

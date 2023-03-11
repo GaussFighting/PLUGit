@@ -1,3 +1,11 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: rem(320),
+  md: rem(720),
+  lg: rem(1024),
+  xl: rem(1920),
+  xxl: rem(2560),
+);
 $primary-color: #626872;
 $primary-bg-color: #f3f2f2;
 $secondary-color: #fcbc1c;
@@ -55,4 +63,39 @@ code {
 
 .top-image {
   height: 400px;
+}
+ul {
+  list-style-type: none;
+}
+
+.box {
+  font-size: 1rem;
+}
+
+h5 {
+  display: flex;
+  justify-content: center;
+}
+
+.card-body:hover {
+  color: $dark;
+}
+.card {
+  border: none;
+  background-color: $primary-bg-color;
+  padding: 0 0 20px;
+  margin: auto;
+}
+
+.card-text {
+  color: $dark;
+  text-align: initial;
+}
+
+@media only screen and (max-width: rem(1023)) {
+  .card {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
 }
