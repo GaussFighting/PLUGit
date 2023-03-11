@@ -4,14 +4,14 @@ import Offer from "./Offer";
 import bulbs from "../styles/images/bulb.jpg";
 import lamps from "../styles/images/factoryLamps.jpg";
 import wires from "../styles/images/wires.jpg";
-import Box2 from "../components/Box.js";
 
 const Offers = () => {
   return (
-    <div className="container">
-      {" "}
-      <h1>OFERTA</h1>
-      <div id="offer" className="container pt-4">
+    <div>
+      <div className="pl-4">
+        <h1>OFERTA</h1>
+      </div>
+      <div id="offer" className="pt-4">
         <Row className="row justify-content-md-center">
           <Col className="card" lg={4}>
             <Offer

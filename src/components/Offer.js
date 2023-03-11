@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Collapse, Card, CardBody, CardTitle, CardText } from "reactstrap";
-import Box from "../components/Box.js";
 
 const Offer = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,10 +11,10 @@ const Offer = (props) => {
     <Card
       color="warning"
       style={{
-        width: "18rem",
+        width: "19rem",
       }}
     >
-      <img alt="Sample" src={props.src} />
+      <img alt="Sample" className="card-img" src={props.src} />
       <CardBody>
         <div onClick={toggle}>
           <CardTitle tag="h5">{props.title}</CardTitle>
@@ -26,7 +25,6 @@ const Offer = (props) => {
         >
           <CardText>
             <ul>
-              {" "}
               {props.description.map((point, idx) => {
                 return <li key={idx}>{point}</li>;
               })}

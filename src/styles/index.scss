@@ -1,9 +1,18 @@
+@use "sass:math";
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) * 1rem;
+  } @else {
+    @error 'Don\'t use units when using the rem() function; only numbers';
+  }
+}
 $grid-breakpoints: (
   xs: 0,
   sm: rem(320),
   md: rem(720),
   lg: rem(1024),
-  xl: rem(1920),
+  xl: rem(1600),
   xxl: rem(2560),
 );
 $primary-color: #626872;
@@ -20,7 +29,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: $primary-bg-color;
-  color: $primary-color;
+  color: $dark;
   text-align: justify;
 }
 
@@ -48,17 +57,14 @@ code {
   height: 100px;
   display: flex;
   align-items: center;
-  color: $primary-bg-color;
+  color: $dark;
+  font-weight: bold;
   padding: 24px 30px !important;
   line-height: 24px;
 }
 .nav-link-custom:hover {
-  height: 100px;
-  align-items: center;
-  display: flex;
-  color: $primary-bg-color;
-  font-weight: bold;
   background-color: $secondary-bg-color;
+  color: $dark;
 }
 
 .top-image {
@@ -78,24 +84,82 @@ h5 {
 }
 
 .card-body:hover {
-  color: $dark;
+  color: $primary-color;
+  cursor: pointer;
 }
 .card {
   border: none;
   background-color: $primary-bg-color;
   padding: 0 0 20px;
-  margin: auto;
+  background: transparent;
+  border-radius: 10px;
 }
 
 .card-text {
   color: $dark;
   text-align: initial;
 }
+.card-img {
+  border-radius: 10px 10px 0px 0px;
+}
+.companies {
+  background-image: url("./images/companiestransparent2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 0px;
+  height: 100%;
+  width: 300px;
+}
 
+.contact {
+  background-color: $secondary-color;
+}
+.contact-text {
+  display: inline-block;
+}
+.row {
+  margin: 0;
+}
+.fa-icons {
+  color: $dark;
+}
+.fa-icons:hover {
+  color: $secondary-color;
+}
+.contact-title {
+  padding-left: 110px;
+  display: inline-block;
+}
+.contact-col {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: rem(1600)) {
+  .companies {
+    display: none;
+  }
+  .companies-horizontal {
+    background-image: url("./images/companieshorizontaltransparent.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    height: 242px;
+    width: 100vw;
+  }
+  .content {
+    margin-bottom: 0px !important;
+  }
+}
 @media only screen and (max-width: rem(1023)) {
   .card {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+    // display: inline-block;
+    // vertical-align: middle;
+    // float: none;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: rem(320)) {
+  .card {
+    margin: auto;
   }
 }
